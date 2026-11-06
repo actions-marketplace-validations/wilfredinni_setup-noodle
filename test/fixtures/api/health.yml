@@ -1,0 +1,8 @@
+name: Fixture health
+method: GET
+url: $base_url/health
+timeout: 5000
+assert:
+  - expression: status
+    operator: equals
+    value: 200

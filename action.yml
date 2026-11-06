@@ -1,0 +1,12 @@
+name: Setup Noodle
+description: Install an exact Noodle CLI release and verify its SHA-256 checksum.
+inputs:
+  version:
+    description: Exact stable Noodle CLI release tag, such as v0.10.3.
+    required: true
+runs:
+  using: node24
+  main: src/install.js
+branding:
+  icon: download
+  color: orange
