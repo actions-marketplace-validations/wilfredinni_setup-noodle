@@ -2,6 +2,8 @@
 
 Install the Noodle CLI for use in subsequent GitHub Actions steps. The action runs on GitHub’s Node 24 runtime and requires no Bun, package installation, or separate Node setup.
 
+[Noodle repository](https://github.com/wilfredinni/noodle) · [Noodle website](https://noodlerest.dev/) 
+
 ```yaml
 name: API tests
 on: [push, pull_request]
