@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: wilfredinni/setup-noodle@v1
+      - uses: noodle-rest/setup-noodle@v1
         with:
           version: v0.10.3
       - run: noodle collection run ./api --env ci
@@ -25,10 +25,10 @@ jobs:
 
 ### Pin the action to a commit
 
-After the action release is published, open its tagged commit and copy the full 40-character SHA. Replace the placeholder below with that SHA to keep using the same installer even when `v1` moves. Keep the CLI tag in `with.version`. [Action releases](https://github.com/wilfredinni/setup-noodle/releases)
+After the action release is published, open its tagged commit and copy the full 40-character SHA. Replace the placeholder below with that SHA to keep using the same installer even when `v1` moves. Keep the CLI tag in `with.version`. [Action releases](https://github.com/noodle-rest/setup-noodle/releases)
 
 ```yaml
-- uses: wilfredinni/setup-noodle@<FULL_40_CHARACTER_COMMIT_SHA> # v1.0.0
+- uses: noodle-rest/setup-noodle@<FULL_40_CHARACTER_COMMIT_SHA> # v1.0.0
   with:
     version: v0.10.3
 ```
