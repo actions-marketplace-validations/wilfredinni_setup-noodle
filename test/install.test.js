@@ -9,7 +9,7 @@ const { install } = require('../src/install');
 const bytes = Buffer.from([0x00, 0xff, 0x0a, 0x80]);
 const digest = createHash('sha256').update(bytes).digest('hex');
 const version = 'v3.12.0';
-const release = `https://github.com/wilfredinni/noodle/releases/download/${version}`;
+const release = `https://github.com/noodle-rest/noodle/releases/download/${version}`;
 const linux = 'noodle-linux-x86_64';
 
 async function runner(t) {

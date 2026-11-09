@@ -39,7 +39,7 @@ async function install(env, platform, arch) {
   if (!asset) throw new Error(`Unsupported Noodle platform: ${platform}-${arch}`);
   if (!env.RUNNER_TEMP || !env.GITHUB_PATH) throw new Error('RUNNER_TEMP and GITHUB_PATH are required');
 
-  const release = `https://github.com/wilfredinni/noodle/releases/download/${version}`;
+  const release = `https://github.com/noodle-rest/noodle/releases/download/${version}`;
   const manifest = await download(`${release}/SHA256SUMS`);
   const expected = expectedChecksum(await manifest.text(), asset);
   const response = await download(`${release}/${asset}`);

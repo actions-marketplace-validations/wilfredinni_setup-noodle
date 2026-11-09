@@ -2,7 +2,7 @@
 
 Install the Noodle CLI for use in subsequent GitHub Actions steps. The action runs on GitHub’s Node 24 runtime and requires no Bun, package installation, or separate Node setup.
 
-[Noodle repository](https://github.com/wilfredinni/noodle) · [Noodle website](https://noodlerest.dev/) 
+[Noodle repository](https://github.com/noodle-rest/noodle) · [Noodle website](https://noodlerest.dev/)
 
 ```yaml
 name: API tests
@@ -28,7 +28,7 @@ jobs:
 After the action release is published, open its tagged commit and copy the full 40-character SHA. Replace the placeholder below with that SHA to keep using the same installer even when `v1` moves. Keep the CLI tag in `with.version`. [Action releases](https://github.com/noodle-rest/setup-noodle/releases)
 
 ```yaml
-- uses: noodle-rest/setup-noodle@<FULL_40_CHARACTER_COMMIT_SHA> # v1.0.0
+- uses: noodle-rest/setup-noodle@<FULL_40_CHARACTER_COMMIT_SHA> # v1.0.1
   with:
     version: v0.10.3
 ```
@@ -41,7 +41,7 @@ After the action release is published, open its tagged commit and copy the full 
 | macOS | x64, arm64 |
 | Windows | x64 |
 
-Each invocation downloads the platform binary and `SHA256SUMS` from the requested official release. The action requires one matching checksum entry and verifies the file before adding its fresh directory under `RUNNER_TEMP` to `GITHUB_PATH`. Subsequent steps can invoke `noodle` on every supported platform. [Noodle CLI releases](https://github.com/wilfredinni/noodle/releases)
+Each invocation downloads the platform binary and `SHA256SUMS` from the requested official release. The action requires one matching checksum entry and verifies the file before adding its fresh directory under `RUNNER_TEMP` to `GITHUB_PATH`. Subsequent steps can invoke `noodle` on every supported platform. [Noodle CLI releases](https://github.com/noodle-rest/noodle/releases)
 
 ### Development
 
